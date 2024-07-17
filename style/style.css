@@ -1,0 +1,202 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+/* navbar css start here  */
+.navbar-wrapper{
+    background-color:rgb(71, 85, 105) ;
+
+}
+.navbar-main{
+    /* border: 1px solid tomato; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 20px;
+    
+}
+.nav-menu-btn{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.ham-barger{
+    display: none;
+}
+/* banner start here  */
+.main-content{
+    max-width: 1200px;
+    margin: 0px auto;
+    min-height: 400px;
+    border: 2px solid red;
+}
+.banner-childs{
+    width: 47%;
+    position: relative;
+    
+}
+.banner-childs img{
+    width: 100%;
+    border-radius: 10px;
+}
+.fifty-off{
+    background-color: rgba(13, 5, 5, 0.624);
+    color: wheat;
+    width: max-content;
+    padding: 10px 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(242, 242, 242) ;
+
+}
+.banner-btn{
+    border: 2px solid gray;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* popular star here  */
+.popular-main{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card{
+    min-height: 200px;
+    padding: 10px;
+    box-shadow: 8px 8px 8px black ;
+    border-radius: 10px;
+}
+   
+    
+.card img{
+    width: 100%;
+}
+.card>div:nth-child(1){
+    height: 270px;
+    
+}
+/* odvut main  */
+.odvut-main{
+    margin-top: 50px;
+    border: 2px solid tomato;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    grid-template-rows: repeat(12, 1fr);
+}
+.odvut-child-1{
+    background-color: rebeccapurple;
+    grid-column: 1/span 7;
+    border-radius: 70px;
+    grid-row: 1/span 6;
+    position: relative;
+    
+}
+.odvut-child-2{
+    background-color: green;
+    grid-column: 8/span 5;
+    border-radius: 70px;
+    grid-row: 1/span 6;
+    position: relative;
+
+
+}
+.odvut-child-3{
+    background-color: blue;
+    grid-column: 1/span 5;
+    border-radius: 70px;
+    grid-row: 7/span 6;
+    position: relative;
+
+}
+.odvut-child-4{
+    background-color:aqua ;
+    grid-column: 6/span 7;
+    border-radius: 70px;
+    grid-row: 7/span 6;
+    position: relative;
+}
+.odvut-main img{
+    width: 100%;
+    height:100% ;
+    border-radius: 70px;
+    filter: brightness(20%);
+}
+.icon{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translateX(35px);
+}
+
+
+
+
+
+
+
+/* navbar end here  */
+/* responsive area   */
+@media screen and (max-width: 800px){
+    .navbar-main{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .navbar-main>div{
+        margin-top: 20px;
+    }
+.popular-main{
+    grid-template-columns: repeat(2, 1fr);
+}
+    
+}
+
+@media screen and (max-width: 500px){
+    .ham-barger{
+        display: block;
+    }
+    .nav-btn-container{
+        display: none;
+    }
+    .navbar-main{
+        flex-direction: row;
+    }
+    .banner-main{
+        flex-direction: column;
+    }
+    .banner-childs{
+        width: 100%;
+    }
+    .popular-main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
